@@ -1,4 +1,4 @@
-<img alt="Logo" height="400" src="/home/flavio/PycharmProjects/nodes_handler/img/TaskMAS.png" width="400"/>
+<img alt="Logo" height="400" src="https://github.com/flaat/TaskMAS_test_framework/blob/master/img/TaskMAS.png" width="400"/>
 
 # TaskMAS test framework
 
@@ -34,7 +34,7 @@ In the image below there is a possible scenario with two different targets (warn
  ``` ../src/network_configs/outdoor_network_config/TaskMAS_example_config_4_targets.json```
 
 
-<img alt="Config_example" height="320" src="/home/flavio/PycharmProjects/nodes_handler/img/config_example.png" width="300"/>
+<img alt="Config_example" height="320" src="https://github.com/flaat/TaskMAS_test_framework/blob/master/img/config_example.png" width="300"/>
 
 The tests run as follows:
 First of all, a configuration provided by the optimizer is read from the configs available, then it is coverted in a framework-friendly format.
