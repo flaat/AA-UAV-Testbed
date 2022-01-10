@@ -1,0 +1,83 @@
+{
+  "depot": [
+    {
+      "id": 4,
+      "data": null,
+      "next_hop": null,
+      "coords": [
+        35,
+        0,
+        0
+      ]
+    }
+  ],
+  "drones": {
+    "0": {
+      "data": null,
+      "monitored_target": 0,
+      "exp_flow_size": 450.0,
+      "exp_accuracy": 40,
+      "res_quality": 450,
+      "next_hop": 2,
+      "coords": [
+        25.0,
+        40.0,
+        5
+      ]
+    },
+    "1": {
+      "data": null,
+      "monitored_target": 1,
+      "exp_flow_size": 2350.0,
+      "exp_accuracy": 40,
+      "res_quality": 450,
+      "next_hop": 2,
+      "coords": [
+        35.0,
+        17.029285706718046,
+        5
+      ]
+    },
+    "2": {
+      "data": null,
+      "monitored_target": null,
+      "exp_flow_size": 900.0,
+      "exp_accuracy": 40,
+      "res_quality": 450,
+      "next_hop": 3,
+      "coords": [
+        25.0,
+        25.0,
+        5
+      ]
+    },
+    "3": {
+      "data": null,
+      "monitored_target": null,
+      "exp_flow_size": 1900.0,
+      "exp_accuracy": 60,
+      "res_quality": 1000,
+      "next_hop": 4,
+      "coords": [
+        42.999999999655344,
+        25.0,
+        5
+      ]
+    }
+  },
+  "targets": {
+    "0": {
+      "exp_accuracy": 40,
+      "res_quality": 450,
+      "drone": 0,
+      "dataset": 5
+    },
+    "1": {
+      "exp_accuracy": 40,
+      "res_quality": 450,
+      "drone": 1,
+      "dataset": 5
+
+    }
+  }
+}
