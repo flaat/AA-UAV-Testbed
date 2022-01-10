@@ -28,46 +28,46 @@ if __name__ == "__main__":
 
             plot_config(CONFIG)
 
-    for i in range(0, config.TEST_REP):
+        for i in range(0, config.TEST_REP):
 
-        for connection_dict, TEST_CONFIG in zip(config_list, tests_names):
+            for connection_dict, TEST_CONFIG in zip(config_list, tests_names):
 
-            total_nodes = sum([len(v["nodes"]) for k, v in connection_dict.items()])
+                total_nodes = sum([len(v["nodes"]) for k, v in connection_dict.items()])
 
-            controller = Controller(controller_ip=config.CONTROLLER_IP, total_nodes=total_nodes)
+                controller = Controller(controller_ip=config.CONTROLLER_IP, total_nodes=total_nodes)
 
-            stats_thread = Thread(target=controller.get_stats, args=())
+                stats_thread = Thread(target=controller.get_stats, args=())
 
-            stats_thread.start()
+                stats_thread.start()
 
-            for test_name, connections in connection_dict.items():
+                for test_name, connections in connection_dict.items():
 
-                print(f"Executing {test_name}...")
+                    print(f"Executing {test_name}...")
 
-                nodes = connections["nodes"]
+                    nodes = connections["nodes"]
 
-                quality = connections["quality"]
+                    quality = connections["quality"]
 
-                file_to_send_path = f"{config.FILES_TO_SEND_PATH}/{quality}/"
+                    file_to_send_path = f"{config.FILES_TO_SEND_PATH}/{quality}/"
 
-                save_path = f"{config.RECEIVED_DIRECTORY}/{test_name}_{quality}_rec/"
+                    save_path = f"{config.RECEIVED_DIRECTORY}/{test_name}_{quality}_rec/"
 
-                controller.init_connection(nodes_roles=nodes, file_to_send_path=file_to_send_path, save_path=save_path)
+                    controller.init_connection(nodes_roles=nodes, file_to_send_path=file_to_send_path, save_path=save_path)
 
-            while True:
+                while True:
 
-                if all(True if conn.connection_status == "CLOSE" else False for id, conn in
-                       controller.connections.items()):
-                    break
+                    if all(True if conn.connection_status == "CLOSE" else False for id, conn in
+                           controller.connections.items()):
+                        break
 
-                time.sleep(1)
+                    time.sleep(1)
 
-                print(controller.get_connections_status(), end='\r')
+                    print(controller.get_connections_status(), end='\r')
 
-            stats_thread.join()
+                stats_thread.join()
 
-            with open(f"{config.RESULTS_FOLDER_PATH}/res_NUMBER_{i}_{TEST_CONFIG}", "w") as f:
+                with open(f"{config.RESULTS_FOLDER_PATH}/res_NUMBER_{i}_{TEST_CONFIG}", "w") as f:
 
-                json.dump(controller.connections_stats, f)
+                    json.dump(controller.connections_stats, f)
 
-            controller.close()
+                controller.close()
