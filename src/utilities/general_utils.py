@@ -146,15 +146,3 @@ def get_config(d: dict):
 
     return res
 
-
-# if __name__ == "__main__":
-#
-#     print(OUTDOOR_CONFIG_PATH)
-#
-#     with open(OUTDOOR_CONFIG_PATH+"/config_35,_15,_25,_25,_25,_40,_45,_25_RoutingAlgorithm_OPTSaRL.json", "r") as f:
-#
-#         CONFIG = json.load(f)
-#
-#         print(get_config(CONFIG))
-#
-#         plot_config(CONFIG)
