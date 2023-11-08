@@ -34,7 +34,7 @@ In the image below there is a possible scenario with two different targets (warn
  ``` ../src/network_configs/outdoor_network_config/TaskMAS_example_config_4_targets.json```
 
 
-<img alt="Config_example" height="320" src="https://github.com/flaat/AA-UAV/blob/master/img/config_example.png" width="300"/>
+<img alt="Config_example" height="320" src="https://github.com/flaat/AA-UAV-Outdoor/blob/master/img/config_example.png" width="300"/>
 
 The tests run as follows:
 First of all, a configuration provided by the optimizer is read from the configs available, then it is coverted in a framework-friendly format.
