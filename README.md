@@ -1,10 +1,10 @@
 <img alt="Logo" height="400" src="https://github.com/flaat/TaskMAS_test_framework/blob/master/img/TaskMAS.png" width="400"/>
 
-# TaskMAS test framework
+# AA-UAV test framework
 
 ## Goals
 
-This package has been developed in order to allow fixed path communication in ad-hoc mesh network to tests the _TaskMAS_ framework in different real-world scenarios.
+This package has been developed in order to allow fixed path communication in ad-hoc mesh network to tests the _AA-UAV_ framework in different real-world scenarios.
 The protocol used is B.A.T.M.A.N. [^1], a layer 2 protocol for ad-hoc network. Our goal is to force packets through a pre-fixed path in the network.
 
 
@@ -34,7 +34,7 @@ In the image below there is a possible scenario with two different targets (warn
  ``` ../src/network_configs/outdoor_network_config/TaskMAS_example_config_4_targets.json```
 
 
-<img alt="Config_example" height="320" src="https://github.com/flaat/TaskMAS_test_framework/blob/master/img/config_example.png" width="300"/>
+<img alt="Config_example" height="320" src="https://github.com/flaat/AA-UAV/blob/master/img/config_example.png" width="300"/>
 
 The tests run as follows:
 First of all, a configuration provided by the optimizer is read from the configs available, then it is coverted in a framework-friendly format.
